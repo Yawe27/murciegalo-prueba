@@ -5,7 +5,9 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     Rigidbody2D rb2d;
+    [Header ("Tiempo de Muerte")]
     public float deathTime;
+    [Header("Velocidad")]
     public float speed;
     public int bulletDamage;
 
@@ -36,7 +38,7 @@ public class BulletController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyController>().Damaged(bulletDamage);
+            collision.gameObject.SetActive(false);
 
             Destroy(this.gameObject);
         }
@@ -56,6 +58,11 @@ public class BulletController : MonoBehaviour
             enemigo3Controller arañahp = collision.gameObject.GetComponent<enemigo3Controller>();
             arañahp.actualHp -= bulletDamage;
             Destroy(this.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Cubo"))
+        {
+
+            Destroy(collision.gameObject);
         }
     }
     //private void OnCollisionEnter2D(Collision2D collision)

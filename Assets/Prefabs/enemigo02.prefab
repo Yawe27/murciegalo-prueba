@@ -49,6 +49,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -143,11 +145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31738ae60969e904face3278cc1868c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actualHp: 8
-  speed: 0.3
-  "da\xF1o": 3
-  dmg: 2
-  deathTime: 3
+  actualHp: 2
+  speed: 0.1
+  "da\xF1o": 1
+  dmg: 1
+  deathTime: 0.2
   fuerza: {x: 0, y: -1}
   experiencia: {fileID: 0}
   DropDamage: {fileID: 3058100614917334053, guid: dd3e95b86a60cd2428d62db0279bbc42,
